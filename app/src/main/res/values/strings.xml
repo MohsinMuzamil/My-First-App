@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">M3 Tecnologies</string>
+    <string name="add_task">Add a new task</string>
+
+    <string-array name="subject_list">
+        <item>Enter Subject</item>
+        <item>Math</item>
+        <item>Science</item>
+        <item>English</item>
+        <item>History</item>
+        <item>Computer</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,56 @@
+<!-- res/layout/activity_submit.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="32dp"
+    android:gravity="center"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/studentIdTextView"
+        android:layout_width="wrap_content"
+        android:textSize="23sp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/schoolNameTextView"
+        android:layout_width="wrap_content"
+        android:textSize="23sp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/classTextView"
+        android:layout_width="wrap_content"
+        android:textSize="23sp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/subjectTextView"
+        android:layout_width="wrap_content"
+        android:textSize="23sp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/submitButton"
+        android:text="Submit"
+        android:layout_width="match_parent"
+        android:backgroundTint="@color/Orange"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/backButton"
+        android:backgroundTint="@color/Orange"
+        android:text="Back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

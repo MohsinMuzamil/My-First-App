@@ -1,0 +1,125 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+   <LinearLayout
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    >
+
+
+      <TextView
+          android:id="@+id/dashboardTitle"
+          android:text="Dashboard"
+          android:textSize="50dp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="15dp"
+      android:gravity="center" />
+
+
+      <Button
+          android:id="@+id/logoutButton"
+          android:text="Logout"
+          android:textColor="#FBFBFB"
+      android:backgroundTint="@color/Orange1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="16dp"
+      android:layout_marginEnd="15dp"
+      android:layout_gravity="center" />
+
+
+      <TextView
+          android:id="@+id/welcomeTextView"
+          android:text="Welcome, client@email.com"
+          android:textSize="20sp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="16dp"
+      android:gravity="center" />
+
+
+      <EditText
+          android:id="@+id/studentIdEditText"
+          android:hint="Enter Student ID"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="16dp"
+          android:padding="10dp" />
+
+      <EditText
+          android:id="@+id/schoolNameEditText"
+          android:hint="Enter School Name"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="16dp"
+          android:padding="10dp" />
+
+      <EditText
+          android:id="@+id/classEditText"
+          android:hint="Enter Class"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="16dp"
+          android:padding="10dp" />
+
+
+      <Spinner
+          android:id="@+id/subjectSpinner"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="12dp"
+          android:hint="Enter Subject"
+          android:layout_marginBottom="16dp"
+          android:padding="10dp"/>
+
+
+
+      <Button
+          android:id="@+id/nextButton"
+          android:text="Next"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textColor="#FBFBFB"
+      android:backgroundTint="@color/Orange"
+      android:layout_marginBottom="16dp"
+      android:padding="10dp" />
+
+
+
+         <ImageView
+             android:id="@+id/bulbImage"
+             android:layout_width="377dp"
+             android:layout_height="377dp"
+             android:src="@drawable/off_bulb"
+             android:layout_gravity="center"
+             android:layout_marginBottom="16dp" />
+
+         <Button
+             android:id="@+id/on_bulb_btn"
+             android:text="On Bulb"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:textColor="#FBFBFB"
+             android:backgroundTint="@color/Orange"
+             android:layout_marginBottom="16dp"
+             android:padding="10dp" />
+
+         <Button
+             android:id="@+id/off_bulb_btn"
+             android:text="Off Bulb"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:textColor="#FBFBFB"
+             android:backgroundTint="@color/Orange"
+             android:layout_marginBottom="16dp"
+             android:padding="10dp" />
+
+    </LinearLayout>
+</ScrollView>

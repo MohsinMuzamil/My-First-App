@@ -1,4 +1,3 @@
-// src/main/java/yourpackage/DashboardActivity.kt
 package com.example.m3tecnologies
 
 import android.content.Intent
@@ -10,8 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.Spinner
 import android.widget.ArrayAdapter
 import android.widget.ImageView
-
-
+import androidx.appcompat.widget.SwitchCompat
 
 class DashboardActivity : AppCompatActivity() {
 
@@ -21,12 +19,9 @@ class DashboardActivity : AppCompatActivity() {
     lateinit var studentIdEditText: EditText
     lateinit var schoolNameEditText: EditText
     lateinit var classEditText: EditText
-    lateinit var subjectEditText: EditText
     lateinit var subjectSpinner: Spinner
     private lateinit var bulbImage: ImageView
-    private lateinit var onButton: Button
-    private lateinit var offButton: Button
-
+    private lateinit var onBulbSwitch: SwitchCompat  // Use SwitchCompat instead of two buttons
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,14 +35,14 @@ class DashboardActivity : AppCompatActivity() {
         classEditText = findViewById(R.id.classEditText)
         subjectSpinner = findViewById(R.id.subjectSpinner)
         bulbImage = findViewById(R.id.bulbImage)
-        onButton = findViewById(R.id.on_bulb_btn)
-        offButton = findViewById(R.id.off_bulb_btn)
+        onBulbSwitch = findViewById(R.id.on_bulb_btn)  // SwitchCompat instance
 
+        // Get email from intent and display welcome message
         val email = intent.getStringExtra("email")
         welcomeTextView.text = "Welcome, $email"
 
         logoutButton.setOnClickListener {
-
+            // Log out logic, clearing shared preferences and going back to login screen
             val pref = getSharedPreferences("Login", MODE_PRIVATE)
             val editor = pref.edit()
             editor.putBoolean("flag", false)
@@ -58,8 +53,7 @@ class DashboardActivity : AppCompatActivity() {
             finish()
         }
 
-
-
+        // Set up the spinner for subject selection
         val subjectAdapter = ArrayAdapter.createFromResource(
             this,
             R.array.subject_list,
@@ -68,16 +62,16 @@ class DashboardActivity : AppCompatActivity() {
         subjectAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         subjectSpinner.adapter = subjectAdapter
 
-
-        onButton.setOnClickListener {
-            bulbImage.setImageResource(R.drawable.on_bulb)
+        // Handle bulb state change based on the switch
+        onBulbSwitch.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                bulbImage.setImageResource(R.drawable.on_bulb)  // Show the bulb on
+            } else {
+                bulbImage.setImageResource(R.drawable.off_bulb)  // Show the bulb off
+            }
         }
 
-        offButton.setOnClickListener {
-            bulbImage.setImageResource(R.drawable.off_bulb)
-        }
-
-
+        // Handle next button click, pass data to SubmitActivity
         nextButton.setOnClickListener {
             val intent = Intent(this, SubmitActivity::class.java)
             val selectedSubject = subjectSpinner.selectedItem.toString()
@@ -86,9 +80,6 @@ class DashboardActivity : AppCompatActivity() {
             intent.putExtra("className", classEditText.text.toString())
             intent.putExtra("subject", selectedSubject)
             startActivity(intent)
-
-
-
         }
     }
 }

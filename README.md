@@ -30,6 +30,12 @@ This Android app is a feature-rich student dashboard built with Kotlin. It helps
 
 ---
 
+## Screenshots
+
+![Login Dash board](https://github.com/user-attachments/assets/38683b17-160f-4e7a-a734-a384b8eb5aca)
+
+
+---
 
 ## Quick Start
 

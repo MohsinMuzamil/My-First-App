@@ -1,4 +1,4 @@
-# My First App
+                                                                       # My First App
 
 This Android app is a feature-rich student dashboard built with Kotlin. It helps users toggle a light bulb ON/OFF, manage student information, and keep track of tasks via an interactive to-do list. The app is designed with a modern, user-friendly interface and demonstrates key Android and Kotlin concepts, making it ideal for beginners.
 
